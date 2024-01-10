@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h2 style="text-align: center">Sign in</h2>
+        <br />
+        <p>Email or mobile phone number</p>
+        <label for="email"></label>
+        <input type="email" name="email" id="email" class="user_mail" />
+        <br /><br />
+
+        <div class="para">
+          <p>Password</p>
+          <p><a href="#">Forgot Your password?</a></p>
+        </div>
+        <label for="password"></label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          class="user_pass"
+        />
+
+        <div class="btn">
+          <button type="button" onclick="auth()">
+            <b>Sign in</b>
+          </button>
+        </div>
+
+        <div class="footer">
+          <p style="color: greenyellow">WELCOME TO SABJI MANDI</p>
+          <div class="btn_footer">
+            <button type="button">
+              <b>Create an account</b>
+            <!-- </button>
+            <button type="button" style="margin-top: 7px">Sign out</button> -->
+          </div>
+
+          <p class="privacy_policy">
+            <a href="#">please provide us the correct information</a> and our
+            <a href="#"
+              >Proper details and then proceed with your most beloved and
+              trusted website</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function auth() {
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        if (email === "admin@gmail.com" && password === "user") {
+          location.replace("site1.html");
+        } else {
+          location.replace("site1.html");
+          return;
+        }
+      }
+    </script>
+    <!-- Code injected by live-server -->
+    <script>
+      // <![CDATA[  <-- For SVG support
+      if ("WebSocket" in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              var parent = elem.parentElement || head;
+              parent.removeChild(elem);
+              var rel = elem.rel;
+              if (
+                (elem.href && typeof rel != "string") ||
+                rel.length == 0 ||
+                rel.toLowerCase() == "stylesheet"
+              ) {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
+                elem.href =
+                  url +
+                  (url.indexOf("?") >= 0 ? "&" : "?") +
+                  "_cacheOverride=" +
+                  new Date().valueOf();
+              }
+              parent.appendChild(elem);
+            }
+          }
+          var protocol =
+            window.location.protocol === "http:" ? "ws://" : "wss://";
+          var address =
+            protocol + window.location.host + window.location.pathname + "/ws";
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == "reload") window.location.reload();
+            else if (msg.data == "refreshcss") refreshCSS();
+          };
+          if (
+            sessionStorage &&
+            !sessionStorage.getItem("IsThisFirstTime_Log_From_LiveServer")
+          ) {
+            console.log("Live reload enabled.");
+            sessionStorage.setItem("IsThisFirstTime_Log_From_LiveServer", true);
+          }
+        })();
+      } else {
+        console.error(
+          "Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading."
+        );
+      }
+      // ]]>
+    </script>
+  </body>
+</html>

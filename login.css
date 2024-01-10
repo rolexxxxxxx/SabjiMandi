@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    height: 470px;
+    width: 330px;
+    /* background-color: beige; */
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding-left: 20px;
+    padding-top: 30px;
+}
+/* .card p a{
+    text-decoration: none;
+    float: right;
+} */
+.para{
+    display: flex;
+    gap: 4.9rem;
+}
+.para a{
+    text-decoration: none;
+}
+.user_mail{
+    width: 290px;
+    height: 28px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+.user_mail:hover{
+    border: 1px solid rgb(66, 62, 27);
+}
+.user_pass{
+    width: 290px;
+    height: 28px;
+    border-radius: 5px;
+    border: 1px solid gray;
+
+}
+.btn{
+    margin-top: 1.7rem;
+}
+.btn button{
+    width: 290px;
+    height: 29px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-image: linear-gradient(to top, rgb(142, 39, 144), rgb(110, 15, 111));
+}
+.footer{
+    margin-top: 1.6rem;
+}
+.footer p{
+    text-align: center;
+    padding-right: 10px;
+    color: rgb(121, 113, 113);
+}
+.btn_footer{
+    margin-top: 1.4rem;
+}
+.btn_footer button{
+    width: 290px;
+    height: 29px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, lightgray , rgb(190, 179, 179));
+}
+.footer .privacy_policy{
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.footer .privacy_policy a{
+    text-decoration: none;
+}
